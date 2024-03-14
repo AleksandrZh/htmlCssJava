@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Форма заявки на предоставление доступа</h1>
+    </header>
+    <br />
+    <main>
+        <section id="application-form">
+            <h3>Создать заявку:</h3>
+            <form action="place-application.php">
+                <h4>Дата регистрации:</h4>
+                <input name="regdata"  required type="date">
+                <br>
+                <br>
+                <input name="regNumber" required placeholder="Рег. номер" class="lg-input" >
+                <br>
+                <br>
+                <input name="lastname" required placeholder="Фамилия" class="lg-input" />
+                <br>
+                <input name="surname" required placeholder="Имя" class="lg-input" />
+                <br>
+                <input name="surname1" required placeholder="Отчество" class="lg-input" />
+                <br>
+                <br>
+                <input name="telNumber"  required placeholder="Номер телефона" class="lg-input" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" />
+                <br>
+                <br>
+                <input name="regNumberConf" placeholder="Номер договора конфеденциальности" class="lg-input" >
+                <br>
+                <br>
+                <h4>Пользователь на предприятии:</h4>
+                <input name="userOrg" type="radio" value="newUser">Новый пользователь<br />
+                <input name="userOrg" type="radio" value="existUser">Существующий пользователь<br />
+                <input name="userOrg" type="radio" value="externalUser">Подрядчик<br />
+                <br>
+                <br>
+                <br>
+                <h4>Информационные системы:</h4>
+                <select name="infSystem" id="">
+                    <option value="1">1C бухгалтерия</option>
+                    <option value="2">Система кадрового документооборота</option>
+                    <option value="3">Система общего документооборота</option>
+                    <option value="4">Управление автотранспортом</option>
+                </select>
+                <h4>Необходимые права</h4>
+                <input name="right" type="checkbox" value="read"/>Чтение<br />
+                <input name="right" type="checkbox" value="execution"/>Выполнение<br />
+                <input name="right" type="checkbox" value="full access"/>Полный доступ<br />
+                <br>
+                <br>
+                <button type="submit">Отправить заявку</button>
+            </form>
+
+        </section>
+    </main>
+
+</body>
+</html>
